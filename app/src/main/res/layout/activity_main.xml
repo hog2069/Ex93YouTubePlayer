@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- YouTubePlayerView 는 반드시 YouTubeBaseActivity 안에서 만 사용 가능함-->
+    <!-- YouTubeBaseActivity 는 androidx 패지키를 사용할 수 없음 그래서 불편함-->
+<!--    <com.google.android.youtube.player.YouTubePlayerView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"/>-->
+
+    <!-- 어떤 Activity 에서도 사용가능한 YouTubePlayerFragment 사용-->
+    <fragment
+        android:id="@+id/youTubeFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.google.android.youtube.player.YouTubePlayerFragment"/>
+
+    <fragment
+        android:id="@+id/youTubeFragment2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.google.android.youtube.player.YouTubePlayerFragment"
+        android:layout_marginTop="16dp"/>
+
+    <com.google.android.youtube.player.YouTubeThumbnailView
+        android:id="@+id/youTubeThumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
